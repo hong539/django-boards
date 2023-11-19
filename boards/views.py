@@ -8,6 +8,7 @@ from django.utils import timezone
 from django.utils.decorators import method_decorator
 from .forms import NewTopicForm, PostForm
 from .models import Board, Topic, Post
+from django.urls import reverse
 
 # Create your views here.
 class BoardListView(ListView):
