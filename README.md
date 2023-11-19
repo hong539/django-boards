@@ -63,3 +63,28 @@ To do:
 
 ## Contact
 Created by [Peter Kibuchi](https://www.peterkibuchi.com).
+
+
+## Test
+
+```shell
+pyenv local 3.8.17
+poetry init
+vim pyproject.toml
+poetry env use 3.8
+poetry shell
+#
+pip install -r requirements.txt
+
+#install tool-chain for build psycopg2
+sudo apt install postgresql postgresql-contrib
+sudo apt install libpq-dev
+
+
+#test djago
+python manage.py runserver 8080
+
+#gunicorn
+gunicorn myproject.wsgi --log-file -
+gunicorn myproject.wsgi --bind 0.0.0.0:9000
+```
